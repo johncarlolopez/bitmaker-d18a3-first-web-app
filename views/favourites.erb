@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Favourite Sites</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>Favourite sites</h1>
+    <ul>
+      <% @fav_links.each do |link| %>
+      <li><a href="<%= link %>"><%= link.split('/')[2..-1].join('/') %></a></li>
+      <% end %>
+    </ul>
+  </body>
+</html>
